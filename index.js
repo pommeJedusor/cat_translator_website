@@ -30,10 +30,10 @@ function cat_noise_to_bin(cat_noise){
         // if mrrp
     } else if (cat_noise[0] == "m" && !cat_noise.includes("o")) {
         // length min bound to 4
-        let length = Math.max(cat_noise.length, 4);
+        let length = Math.max(cat_noise.length, 3);
         // length max bound to 7
-        length = Math.min(length, 7);
-        return 8 | (length - 4);
+        length = Math.min(length, 6);
+        return 8 | (length - 3);
         // if mrow
     } else {
         // length min bound to 4
