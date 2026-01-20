@@ -18,28 +18,28 @@ function cat_noise_to_bin(cat_noise){
         // length min bound to 4
         let length = Math.max(cat_noise.length, 4);
         // length max bound to 7
-        length = Math.min(cat_noise.length, 7);
+        length = Math.min(length, 7);
         return 12 | (length - 4);
         // if meow
     } else if (cat_noise[0] == "m" && cat_noise.includes("e")) {
         // length min bound to 4
         let length = Math.max(cat_noise.length, 4);
         // length max bound to 7
-        length = Math.min(cat_noise.length, 7);
+        length = Math.min(length, 7);
         return length - 4;
         // if mrrp
     } else if (cat_noise[0] == "m" && !cat_noise.includes("o")) {
         // length min bound to 4
         let length = Math.max(cat_noise.length, 4);
         // length max bound to 7
-        length = Math.min(cat_noise.length, 7);
+        length = Math.min(length, 7);
         return 8 | (length - 4);
         // if mrow
     } else {
         // length min bound to 4
         let length = Math.max(cat_noise.length, 4);
         // length max bound to 7
-        length = Math.min(cat_noise.length, 7);
+        length = Math.min(length, 7);
         return 4 | (length - 4);
     }
 }
