@@ -9,8 +9,8 @@ const BIN_TO_CHAR = [
 ];
 
 const BIN_TO_CAT = [
-    "meow", "meoww", "meowww", "meowwww", "mrow", "mroww", "mrowww", "mrowwww", "mrrp", "mrrrp",
-    "mrrrrp", "mrrrrrp", "purr", "purrr", "purrrr", "purrrrr",
+    "meow", "meoww", "meowww", "meowwww", "mrow", "mroww", "mrowww", "mrowwww", "mrp", "mrrp",
+    "mrrrp", "mrrrrp", "purr", "purrr", "purrrr", "purrrrr",
 ];
 
 function cat_noise_to_bin(cat_noise){
