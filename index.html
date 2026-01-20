@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cat Translator</title>
+</head>
+  <body>
+    <script src="index.js"></script>
+    <p>cat noises to text</p>
+    <input id="cat_noises_to_text_input" oninput="cat_to_text_input()"></input>
+    <p id="cat_noises_to_text_result"></p>
+
+    <p>text to cat noises</p>
+    <input id="text_to_cat_noises_input" oninput="text_to_cat_input()"></input>
+    <p id="text_to_cat_noises_result"></p>
+
+    <script>
+      function cat_to_text_input(){
+        let input = document.getElementById("cat_noises_to_text_input");
+        let output = document.getElementById("cat_noises_to_text_result");
+
+        let cat_noises = input.value;
+        let text_result = cat_noises_to_text(cat_noises.trim());
+
+        output.textContent = text_result;
+      }
+
+      function text_to_cat_input(){
+        let input = document.getElementById("text_to_cat_noises_input");
+        let output = document.getElementById("text_to_cat_noises_result");
+
+        let text = input.value;
+        try {
+          let cat_noises_result = text_to_cat(text.trim());
+          output.textContent = cat_noises_result;
+        }catch (e) {
+          let cat_noises_result = e.message;
+          output.textContent = cat_noises_result;
+        }
+      }
+
+      text_to_cat_input()
+      cat_to_text_input()
+    </script>
+
+  </body>
+</html>
