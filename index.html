@@ -2,16 +2,21 @@
 <html>
 <head>
   <title>Cat Translator</title>
+  <link rel="stylesheet" href="index.css">
 </head>
   <body>
     <script src="index.js"></script>
-    <p>cat noises to text</p>
-    <input id="cat_noises_to_text_input" oninput="cat_to_text_input()" value="meow mrow meow meow mrrp mrrrp purrrrr meoww mrowww meow meow mrowww mrp mrowww meowww mrp meow meow meowwww meow mrow mroww purrrr meow mrp mrp mrp mrow meow meow mrow purr meowww meow meowwww mroww purrrr meow mrow purr meowww purrrrr mrp mrrrp mrow mrow meowww meoww mrp meow meow mrrrrp purrrrr meoww meoww meowwww meow purrrr meoww meow mrowww mrp purrrr meoww mrrrp mrowww meow mrowww meow purrrr meowww mrp mrow mrrrrp meoww mrrrp purr mroww purrrr mrow mrp mrow meoww meowwww meow mrp mrrrrp purr mrowww meow meow meow mrowww meoww meoww mrowwww mrp meoww meowwww meow mrrrrp purr mrowwww mrp purrrr meoww mrp meowwww meow meowww :3"></input>
-    <p id="cat_noises_to_text_result"></p>
+	<div class="center"> 
+	  <button onclick="theme()" id="themeButton">Day theme</button>
+	  <p>cat noises to text</p>
+	  <input id="cat_noises_to_text_input" oninput="cat_to_text_input()" value="meow mrow meow meow mrrp mrrrp purrrrr meow mrow meowwww mrp meoww mrp mrow mroww purrrr meow mrp mrp mrp mrow meow meow mrow purr meowww meow meowwww mroww purrrr meow mrow purr meowww purrrrr mrp mrrrp mrow mrow meowww meoww mrp meow meow mrrrrp purrrrr meoww meoww meowwww meow purrrr meoww meow mrowww mrp purrrr meoww mrrrp mrowww meow mrowww meow purrrr meowww mrp mrow mrrrrp meoww mrrrp purr mroww purrrr mrow mrp mrow meoww meowwww meow mrp mrrrrp purr mrowww meow meow meow mrowww meoww meoww mrowwww mrp meoww meowwww meow mrrrrp purr mrowwww mrp purrrr meoww mrp meowwww meow meowww meowww purr mroww purrrr meow purr meowww meoww meowww meoww meow meoww mrp mrowww mrp mrow meow mrowww mrrrrp purr meow mrrp mrp mroww purrrrr meoww meow mrp mrp mrp"></input>
+	  <p id="cat_noises_to_text_result"></p>
 
-    <p>text to cat noises</p>
-    <input id="text_to_cat_noises_input" oninput="text_to_cat_input()"></input>
-    <p id="text_to_cat_noises_result"></p>
+	  <p>text to cat noises</p>
+	  <button onclick="copy()" id="copyButton">Copy text</button>
+	  <input id="text_to_cat_noises_input" oninput="text_to_cat_input()"></input>
+	  <p id="text_to_cat_noises_result"></p>
+	</div>
 
     <script>
       function cat_to_text_input(){
@@ -37,6 +42,27 @@
           output.textContent = cat_noises_result;
         }
       }
+	  
+	  function copy() {
+	    var copyText = document.getElementById("text_to_cat_noises_result");
+	    var copyBtn = document.getElementById("copyButton");
+	    navigator.clipboard.writeText(copyText.innerText);
+		copyBtn.innerText = "Copied!";
+		setTimeout(changeBtn, 500);
+	  }
+	  function changeBtn(){
+	    var copyBtn = document.getElementById("copyButton");
+		copyBtn.innerText = "Copy text";
+	  }
+	  function theme(){
+	    document.body.classList.toggle("light");
+		var copyBtn = document.getElementById("themeButton");
+		if (document.body.classList.contains("light")) {
+		  copyBtn.innerText = "Night theme";
+		} else {
+		copyBtn.innerText = "Day theme";
+		}
+	  }
 
       text_to_cat_input()
       cat_to_text_input()
