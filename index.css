@@ -1,5 +1,4 @@
 body {
-	background-image: url("https://i.imgur.com/Gz5FnKO.png");
 	background-repeat: no-repeat;
 	background-attachment: fixed; 
 	background-size: 100% 100%;
@@ -14,8 +13,11 @@ body {
 	color: var(--color);
 }
 
+body:not(.light) {
+	background-image: url("./night-background.png");
+}
+
 body.light {
-	background-image: url("blob:https://imgur.com/77e88c51-97d3-4187-9d84-f0baa23439b4");
 	background-repeat: no-repeat;
 	background-attachment: fixed; 
 	background-size: 100% 100%;
