@@ -4,6 +4,7 @@ RUN rm -rf /usr/share/nginx/html/*
 
 COPY ./index.* /usr/share/nginx/html/
 COPY ./night-background.png /usr/share/nginx/html/
+COPY ./comic-sans/Comic-Sans-MS.ttf /usr/share/nginx/html/comic-sans/
 
 EXPOSE 8080
 

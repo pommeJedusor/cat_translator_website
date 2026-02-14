@@ -1,0 +1,1 @@
+Copyright (c) 1995 Microsoft Corporation. All rights reserved. If you received it as part of a Microsoft product (such as Windows or Microsoft Office), then you are typically allowed to use it for commercial purposes under the terms of your license. However, you cannot redistribute the font itself or use it outside of the software package without appropriate permissions.

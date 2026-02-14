@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Comic-Sans-Local";
+  src: url("./comic-sans/Comic-Sans-MS.ttf");
+}
+
 body {
 	background-repeat: no-repeat;
 	background-attachment: fixed; 
@@ -6,7 +11,7 @@ body {
 	height: 100%; 
 	overflow: hidden;
 	font-size: 24px;
-	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font-family: "Comic-Sans-Local";
 	--purpl: #b888ff;
 	--btn: rgba(255, 255, 255, 0);
 	--color: #eaecf0;
@@ -25,7 +30,7 @@ body.light {
 	height: 100%; 
 	overflow: hidden;
 	font-size: 24px;
-	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font-family: "Comic-Sans-Local";
 	--purpl: #ffb300;
 	--btn: rgba(0, 0, 0, 0);
 	--color: #363330;
